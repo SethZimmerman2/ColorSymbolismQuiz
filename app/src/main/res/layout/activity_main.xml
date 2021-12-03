@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Enter Your Name:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader" />
+
+    <TextView
+        android:id="@+id/textQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="1. Which of these is a common hobby of yours?"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+    <TextView
+        android:id="@+id/textQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="35dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="2. Which of these is your most dominant trait?"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQ1" />
+
+    <TextView
+        android:id="@+id/textHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Color Symbolism Quiz"
+        android:textScaleX="1.1"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Name"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textName" />
+
+    <Button
+        android:id="@+id/buttonAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Reveal Answer"
+        android:textScaleX="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioQ1"
+        android:layout_width="287dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQ1">
+
+        <RadioButton
+            android:id="@+id/radioFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Going out with friends"
+            android:textColor="#F44336" />
+
+        <RadioButton
+            android:id="@+id/radioWalks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Going for walks/exploring"
+            android:textColor="#3F51B5" />
+
+        <RadioButton
+            android:id="@+id/radioHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:minHeight="48dp"
+            android:text="Relaxing at home"
+            android:textColor="#4CAF50" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioQ2"
+        android:layout_width="295dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQ2">
+
+        <RadioButton
+            android:id="@+id/radioIntroverted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Introverted"
+            android:textColor="#FFEB3B" />
+
+        <RadioButton
+            android:id="@+id/radioExtroverted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Extroverted"
+            android:textColor="#FF5722" />
+
+        <RadioButton
+            android:id="@+id/radioIntroExtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Extroverted, but only with friends"
+            android:textColor="#9C27B0" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
